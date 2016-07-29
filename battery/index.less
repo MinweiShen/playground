@@ -1,0 +1,92 @@
+@width: 300px;
+
+.Battery {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+
+        #header {
+            height: @width / 9;
+            width: @width / 27;
+            border: solid 2px #52BDF2;
+            border-left: 0;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+        }
+
+        #battery {
+            position: relative;
+            width: @width;
+            height: @width / 3;
+            border: solid 2px #52BDF2;
+            border-radius: 10px;
+        }
+
+        #volume {
+            background: #75D4F2;
+            position: absolute;
+            margin: 1.9% 2.5%;
+            width: 0;
+            height: 90%;
+            z-index: -1;
+            border-radius: 8px;
+        }
+    }
+}
+@-webkit-keyframes chargeBattery {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+@-moz-keyframes chargeBattery {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+@-o-keyframes chargeBattery {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+
+@keyframes chargeBattery {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 95%;
+    }
+}
+
+.chargeBattery(@duration, @easing) {
+    -webkit-animation: chargeBattery @duration infinite;
+    -webkit-animation-timing-function: @easing;
+    -moz-animation: chargeBattery @duration infinite;
+    -moz-animation-timing-function: @easing;
+    -o-animation: chargeBattery @duration infinite;
+    -o-animation-timing-function: @easing;
+    animation: chargeBattery @duration infinite;
+    animation-timing-function: @easing;
+}
+
+.charging {
+    .chargeBattery(3s, linear)
+}

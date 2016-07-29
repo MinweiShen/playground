@@ -1,0 +1,72 @@
+.Battery .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.Battery .container #header {
+  height: 33.33333333px;
+  width: 11.11111111px;
+  border: solid 2px #52BDF2;
+  border-left: 0;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.Battery .container #battery {
+  position: relative;
+  width: 300px;
+  height: 100px;
+  border: solid 2px #52BDF2;
+  border-radius: 10px;
+}
+.Battery .container #volume {
+  background: #75D4F2;
+  position: absolute;
+  margin: 1.9% 2.5%;
+  width: 0;
+  height: 90%;
+  z-index: -1;
+  border-radius: 8px;
+}
+@-webkit-keyframes chargeBattery {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@-moz-keyframes chargeBattery {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@-o-keyframes chargeBattery {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+@keyframes chargeBattery {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 95%;
+  }
+}
+.charging {
+  -webkit-animation: chargeBattery 3s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation: chargeBattery 3s infinite;
+  -moz-animation-timing-function: linear;
+  -o-animation: chargeBattery 3s infinite;
+  -o-animation-timing-function: linear;
+  animation: chargeBattery 3s infinite;
+  animation-timing-function: linear;
+}
