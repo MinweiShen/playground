@@ -1,0 +1,202 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    height: 100%;
+    width: 100%;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* start from here*/
+@menuWidth: 180px;
+
+.container {
+    height: 100vh;
+    min-height: 500px;
+
+    .sidebar {
+        float: left;
+        width: @menuWidth;
+        height: 100%;
+        background: #354051;
+        display: block;
+        transition: width .5s;
+
+        .account {
+            height: @menuWidth;
+            width: 100%;
+        }
+
+        .menu {
+            .menu_section {
+                font-size: 15px;
+                box-sizing: border-box;
+                display: inline-block;
+                width: 100%;
+                border-top: solid 2px #2f3848;
+                overflow: hidden;
+
+                .category {
+                    padding: 20px 0 20px 15px;
+                    cursor: default;
+                    display: block;
+                    color: #647289;
+                }
+                .item-list {
+                    color: #59677d;
+                    padding-bottom: 5px;
+                    white-space: nowrap;
+                    text-overflow: clip;
+
+                    .item {
+                        padding: 8px 0 8px 15px;
+                        cursor: default;
+                        display: block;
+                        font-weight: 700;
+                    }
+                    .item:hover,
+                    .item--selected{
+                        background-color: #2f3948;
+                        border-left: solid 3px #25A6F7;
+                        padding-left: 12px;
+                    }
+                }
+
+                .item-list--hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .sidebar--hidden {
+        transition: width .5s;
+        width: 0;
+    }
+
+
+    .page {
+        height: 100%;
+        overflow: auto;
+
+        .header {
+            border-bottom: solid 2px #e6e8eb;
+            font-size: 15px;
+
+            .menu-toggler {
+                display: inline-flex;
+                width: 2em;
+                height: 2em;
+                float: left;
+                margin: 15px 5px 15px 5px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-top: 2px;
+
+                .bar {
+                    width: 1.5em;
+                    border-top: solid 3px #7b8593;
+                    margin-bottom: 4px;
+                }
+            }
+
+            .brand{
+                width: 200px;
+                display: inline-block;
+                .pulse-logo {
+                    display: inline-block;
+                    font-size: 2em;
+                    color: #c2c8d0;
+                    margin: 15px 0;
+                }
+            }
+
+            .button {
+                cursor: pointer;
+                float: right;
+                display: inline-flex;
+                border-left: solid 2px #e6e8eb;
+                width: 60px;
+                height: 60px;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .button:hover {
+                background: #25a6f7;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

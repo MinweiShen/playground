@@ -1,0 +1,64 @@
+.Battery {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Battery .container {
+  text-align: center;
+}
+.Battery .container #header {
+  display: block;
+  width: 45px;
+  height: 10px;
+  border: solid 2px black;
+  margin: 0 auto;
+  border-bottom: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.Battery .container #battery {
+  position: relative;
+  display: block;
+  height: 270px;
+  width: 135px;
+  border: solid 2px black;
+  border-radius: 10px;
+}
+.Battery .container #battery .eye {
+  position: absolute;
+  display: inline-block;
+  width: 13.5px;
+  height: 13.5px;
+  border: solid 2px black;
+  border-radius: 9px;
+}
+.Battery .container #battery .left-eye {
+  top: 67.5px;
+  left: 38.57142857px;
+}
+.Battery .container #battery .right-eye {
+  top: 67.5px;
+  right: 38.57142857px;
+}
+.Battery .container #battery .mouth {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  border-top: solid 2px black;
+  width: 30px;
+  height: 30px;
+  top: 135px;
+}
+.Battery .container #battery .mouth.sad {
+  border-top-left-radius: 67.5px;
+  border-top-right-radius: 67.5px;
+}
+.Battery .container #battery .mouth.happy {
+  top: 90px;
+  border-bottom-left-radius: 67.5px;
+  border-bottom-right-radius: 67.5px;
+  border-bottom: solid 2px black;
+  border-top: 0;
+}

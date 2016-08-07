@@ -1,0 +1,75 @@
+@height: 270px;
+
+.Battery {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+        text-align: center;
+
+        #header {
+            display: block;
+            width: @height / 6;
+            height: @height / 27;
+            border: solid 2px black;
+            margin: 0 auto;
+            border-bottom: 0;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        #battery {
+            position: relative;
+            display: block;
+            height: @height;
+            width: @height / 2;
+            border: solid 2px black;
+            border-radius: 10px;
+
+            .eye {
+                position: absolute;
+                display: inline-block;
+                width: @height / 20;
+                height: @height / 20;
+                border: solid 2px black;
+                border-radius: @height / 30;
+            }
+
+            .left-eye {
+                top: @height / 4;
+                left: @height / 7;
+            }
+
+            .right-eye {
+                top: @height / 4;
+                right: @height / 7;
+            }
+
+            .mouth {
+                position: relative;
+                margin: 0 auto;
+                display: block;
+                border-top: solid 2px black;
+                width: @height / 9;
+                height: @height / 9;
+                top: @height / 2
+            }
+
+            .mouth.sad {
+                border-top-left-radius: @height * .25;
+                border-top-right-radius: @height * .25;
+            }
+
+            .mouth.happy {
+                top: @height / 3;
+                border-bottom-left-radius: @height * .25;
+                border-bottom-right-radius: @height * .25;
+                border-bottom: solid 2px black;
+                border-top: 0;
+            }
+        }
+    }
+}
