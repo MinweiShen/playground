@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import Mover from '../Mover';
 
 
@@ -25,9 +25,9 @@ function useMouseUp(mover: Mover) {
 }
 
 function useMouseHooks(mover: Mover) {
-  const onMouseDown = useMouseDown(mover);
-  const onMouseMove = useMouseMove(mover);
-  const onMouseUp = useMouseUp(mover);
+  const onMouseDown = useMouseDown(mover) as unknown as React.MouseEventHandler<HTMLDivElement>;
+  const onMouseMove = useMouseMove(mover) as unknown as React.MouseEventHandler<HTMLDivElement>;
+  const onMouseUp = useMouseUp(mover) as unknown as React.MouseEventHandler<HTMLDivElement>;
   return {
     onMouseDown,
     onMouseMove,
