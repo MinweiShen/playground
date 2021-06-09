@@ -1,3 +1,13 @@
 # Playground
+Yarn workspace for my experimental projects
 
-This is a repo for different small projects. Most of them are for fun or experiments.
+## How to run
+1. run `yarn install` in the root folder
+2. add dependencies by `yarn workspace some-workspace add XXX`
+
+
+## multi-tab-nav
+A tab based navigation. Each tab can contain different components.
+
+## movable
+A div you can move around
